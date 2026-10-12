@@ -1,0 +1,60 @@
+/* ===== Meu CSS original (mantido) ===== */
+body {
+    background-color: white;
+    transition: background-color 2s ease;
+}
+
+h1 {
+    font-style: italic;
+    font-size: 2rem;       /* tamanho no celular */
+}
+
+#GOAT {
+    max-width: 200px;      /* tamanho da foto no celular */
+}
+
+#GOAT:hover {
+    box-shadow: 0 0 1px blue, 0 0 25px rgba(0, 0, 255, 0.897), 0 0 40px rgba(0, 0, 255, 0.795);
+}
+
+/* No celular não existe "passar o mouse", então o texto fica com cor escura e legível */
+p {
+    color: #333;
+}
+
+.icone {
+    width: 50px;           /* tamanho dos ícones no celular */
+}
+
+/* Os efeitos de hover só valem em aparelhos com mouse */
+@media (hover: hover) {
+    body:hover {
+        background-color: gainsboro;
+    }
+    p {
+        color: gainsboro;
+        transition: color 2.5s ease;
+    }
+    p:hover {
+        color: black;
+    }
+}
+
+/* ===== MEDIA QUERIES =====
+   Primeiro escrevi para o celular (acima).
+   min-width = "a partir desta largura para cima", então telas maiores sobrescrevem. */
+
+/* Tablet: a partir de 768px */
+@media (min-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    #GOAT { max-width: 240px; }
+    .icone { width: 60px; }
+}
+
+/* Computador: a partir de 992px */
+@media (min-width: 992px) {
+    h1 { font-size: 3rem; }
+    #GOAT { max-width: 300px; }
+    .icone { width: 70px; }
+    p { font-size: 1.1rem; }
+}
