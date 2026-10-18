@@ -1,0 +1,51 @@
+body {
+    background-color: white;
+    transition: background-color 2s ease;
+}
+
+h1 {
+    font-style: italic;
+    font-size: 2rem;       
+}
+
+#GOAT {
+    max-width: 200px;      
+}
+
+#GOAT:hover {
+    box-shadow: 0 0 1px blue, 0 0 25px rgba(0, 0, 255, 0.897), 0 0 40px rgba(0, 0, 255, 0.795);
+}
+
+p {
+    color: #333;
+}
+
+.icone {
+    width: 50px;           
+}
+
+@media (hover: hover) {
+    body:hover {
+        background-color: gainsboro;
+    }
+    p {
+        color: gainsboro;
+        transition: color 2.5s ease;
+    }
+    p:hover {
+        color: black;
+    }
+}
+
+@media (min-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    #GOAT { max-width: 240px; }
+    .icone { width: 60px; }
+}
+
+@media (min-width: 992px) {
+    h1 { font-size: 3rem; }
+    #GOAT { max-width: 300px; }
+    .icone { width: 70px; }
+    p { font-size: 1.1rem; }
+}
